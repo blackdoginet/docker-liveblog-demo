@@ -6,9 +6,9 @@ RUN git clone https://github.com/sourcefabric/Ally-Py.git -b master ally-py
 WORKDIR /opt/ally-py
 RUN git clone https://github.com/superdesk/Live-Blog.git -b master live-blog
 RUN cd live-blog && ./build-eggs && cd distribution && python3.2 application.py -dump
-WORKDIR /opt/ally-py/live-blog/distibution
+WORKDIR /opt/ally-py/live-blog/distribution
 ADD start.sh start.sh
 RUN chmod +x start.sh
 EXPOSE 8080
-ENTRYPOINT /opt/ally-py/live-blog/distibution/start.sh
+ENTRYPOINT /opt/ally-py/live-blog/distribution/start.sh
 
