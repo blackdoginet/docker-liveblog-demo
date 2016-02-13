@@ -1,4 +1,0 @@
-#!/bin/bash
-myip=$(hostname -I | xargs)
-sed -i -- "s/localhost/$myip/g" plugins.properties
-python3.2 application.py
